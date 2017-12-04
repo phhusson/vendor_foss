@@ -56,6 +56,8 @@ downloadFromFdroid com.google.zxing.client.android
 downloadFromFdroid com.artifex.mupdfdemo
 #Keyboard/IME
 downloadFromFdroid com.menny.android.anysoftkeyboard
+#Play Store download
+downloadFromFdroid com.github.yeriomin.yalpstore
 
 wget https://f-droid.org/FDroid.apk -O bin/FDroid.apk
 addCopy FDroid.apk FDroid
