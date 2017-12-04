@@ -46,7 +46,8 @@ downloadFromFdroid org.smssecure.smssecure "messaging"
 #Navigation
 downloadFromFdroid net.osmand.plus
 #Web browser
-downloadFromFdroid org.mozilla.fennec_fdroid "Browser2 QuickSearchBox"
+#downloadFromFdroid org.mozilla.fennec_fdroid "Browser2 QuickSearchBox"
+downloadFromFdroid acr.browser.lightning "Browser2 QuickSearchBox"
 #Calendar
 downloadFromFdroid ws.xsoh.etar Calendar
 #Public transportation
