@@ -40,7 +40,6 @@ downloadFromFdroid() {
 
 #YouTube viewer
 downloadFromFdroid org.schabi.newpipe
-if false;then
 #Ciphered SMS
 downloadFromFdroid org.smssecure.smssecure
 #Navigation
@@ -57,7 +56,6 @@ downloadFromFdroid com.google.zxing.client.android
 downloadFromFdroid com.artifex.mupdfdemo
 #Keyboard/IME
 downloadFromFdroid com.menny.android.anysoftkeyboard
-fi
 
 wget https://f-droid.org/FDroid.apk -O bin/FDroid.apk
 addCopy FDroid.apk FDroid
