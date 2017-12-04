@@ -45,19 +45,24 @@ downloadFromFdroid org.smssecure.smssecure
 #Navigation
 downloadFromFdroid net.osmand.plus
 #Web browser
-downloadFromFdroid acr.browser.lightning
+downloadFromFdroid org.mozilla.fennec_fdroid
 #Calendar
 downloadFromFdroid ws.xsoh.etar
 #Public transportation
 downloadFromFdroid de.grobox.liberario
-#Barcode scanner
-downloadFromFdroid com.google.zxing.client.android
 #Pdf viewer
 downloadFromFdroid com.artifex.mupdfdemo
 #Keyboard/IME
 downloadFromFdroid com.menny.android.anysoftkeyboard
 #Play Store download
 downloadFromFdroid com.github.yeriomin.yalpstore
+#Mail client
+downloadFromFdroid com.fsck.k9
+#Ciphered Instant Messaging
+downloadFromFdroid im.vector.alpha
+
+#TODO: Some social network?
+#Facebook? Twitter? Reddit? Mastodon?
 
 wget https://f-droid.org/FDroid.apk -O bin/FDroid.apk
 addCopy FDroid.apk FDroid
