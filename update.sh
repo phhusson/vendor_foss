@@ -3,10 +3,26 @@
 repo="https://f-droid.org/repo/"
 
 addCopy() {
-	echo -e "PRODUCT_COPY_FILES += \\\\\n\tvendor/foss/bin/$1:system/app/$2/${2}.apk" >> apps.mk
+cat >> Android.mk <<EOF
+include \$(CLEAR_VARS)
+
+LOCAL_MODULE := $2
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := bin/$1
+LOCAL_MODULE_CLASS := APPS
+
+include \$(BUILD_PREBUILT)
+EOF
+echo -e "\t$2 \\" >> apps.mk
 }
 
 rm -Rf bin apps.mk
+cat > Android.mk <<EOF
+LOCAL_PATH := \$(my-dir)
+
+EOF
+echo -e 'PRODUCT_PACKAGES += \\' > apps.mk
+
 mkdir -p bin
 downloadFromFdroid() {
 	mkdir -p tmp
@@ -23,6 +39,7 @@ downloadFromFdroid() {
 
 #YouTube viewer
 downloadFromFdroid org.schabi.newpipe
+if false;then
 #Ciphered SMS
 downloadFromFdroid org.smssecure.smssecure
 #Navigation
@@ -39,8 +56,10 @@ downloadFromFdroid com.google.zxing.client.android
 downloadFromFdroid com.artifex.mupdfdemo
 #Keyboard/IME
 downloadFromFdroid com.menny.android.anysoftkeyboard
+fi
 
 wget https://f-droid.org/FDroid.apk -O bin/FDroid.apk
 addCopy FDroid.apk FDroid
+echo >> apps.mk
 
 rm -Rf tmp
