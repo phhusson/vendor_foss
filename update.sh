@@ -53,7 +53,7 @@ downloadFromFdroid ws.xsoh.etar Calendar
 #Public transportation
 downloadFromFdroid de.grobox.liberario
 #Pdf viewer
-downloadFromFdroid com.artifex.mupdfdemo
+downloadFromFdroid com.artifex.mupdf.viewer.app
 #Keyboard/IME
 downloadFromFdroid com.menny.android.anysoftkeyboard "LatinIME OpenWnn"
 #Play Store download
