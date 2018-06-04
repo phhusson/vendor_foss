@@ -64,6 +64,10 @@ downloadFromFdroid com.github.yeriomin.yalpstore
 downloadFromFdroid com.fsck.k9 "Email"
 #Ciphered Instant Messaging
 downloadFromFdroid im.vector.alpha
+#Calendar/Contacts sync
+downloadFromFdroid at.bitfire.davdroid
+#Nextcloud client
+downloadFromFdroid com.nextcloud.client
 
 #TODO: Some social network?
 #Facebook? Twitter? Reddit? Mastodon?
