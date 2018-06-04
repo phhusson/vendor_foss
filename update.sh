@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 repo="https://f-droid.org/repo/"
 
