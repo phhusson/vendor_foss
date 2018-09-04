@@ -41,6 +41,8 @@ downloadFromFdroid() {
 }
 
 
+#phh's Superuser
+downloadFromFdroid me.phh.superuser
 #YouTube viewer
 downloadFromFdroid org.schabi.newpipe
 #Ciphered SMS
