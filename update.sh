@@ -65,7 +65,7 @@ downloadFromFdroid com.github.yeriomin.yalpstore
 #Mail client
 downloadFromFdroid com.fsck.k9 "Email"
 #Ciphered Instant Messaging
-downloadFromFdroid im.vector.alpha
+#downloadFromFdroid im.vector.alpha
 #Calendar/Contacts sync
 downloadFromFdroid at.bitfire.davdroid
 #Nextcloud client
