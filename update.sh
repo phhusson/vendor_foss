@@ -31,12 +31,12 @@ downloadFromFdroid() {
 	mkdir -p tmp
 	if [ ! -f tmp/index.xml ];then
 		#TODO: Check security keys
-		wget $repo/index.jar -O tmp/index.jar
+		wget --connect-timeout=10 $repo/index.jar -O tmp/index.jar
 		unzip -p tmp/index.jar index.xml > tmp/index.xml
 	fi
 	marketvercode="$(xmlstarlet sel -t -m '//application[id="'"$1"'"]' -v ./marketvercode tmp/index.xml || true)"
 	apk="$(xmlstarlet sel -t -m '//application[id="'"$1"'"]/package[versioncode="'"$marketvercode"'"]' -v ./apkname tmp/index.xml || xmlstarlet sel -t -m '//application[id="'"$1"'"]/package[1]' -v ./apkname tmp/index.xml)"
-	wget $repo/$apk -O bin/$apk
+	wget --connect-timeout=10 $repo/$apk -O bin/$apk
 	addCopy $apk $1 "$2"
 }
 
