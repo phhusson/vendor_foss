@@ -36,7 +36,7 @@ downloadFromFdroid() {
 	fi
 	marketvercode="$(xmlstarlet sel -t -m '//application[id="'"$1"'"]' -v ./marketvercode tmp/index.xml || true)"
 	apk="$(xmlstarlet sel -t -m '//application[id="'"$1"'"]/package[versioncode="'"$marketvercode"'"]' -v ./apkname tmp/index.xml || xmlstarlet sel -t -m '//application[id="'"$1"'"]/package[1]' -v ./apkname tmp/index.xml)"
-	wget --connect-timeout=10 $repo/$apk -O bin/$apk
+	while ! wget --connect-timeout=10 $repo/$apk -O bin/$apk;do sleep 1;done
 	addCopy $apk $1 "$2"
 }
 
