@@ -70,6 +70,8 @@ downloadFromFdroid com.fsck.k9 "Email"
 downloadFromFdroid at.bitfire.davdroid
 #Nextcloud client
 downloadFromFdroid com.nextcloud.client
+#Lawnchair launcher
+downloadFromFdroid ch.deletescape.lawnchair.plah "Launcher3QuickStep Launcher2 Launcher3"
 
 #TODO: Some social network?
 #Facebook? Twitter? Reddit? Mastodon?
