@@ -36,7 +36,9 @@ downloadFromFdroid() {
 	fi
 	marketvercode="$(xmlstarlet sel -t -m '//application[id="'"$1"'"]' -v ./marketvercode tmp/index.xml || true)"
 	apk="$(xmlstarlet sel -t -m '//application[id="'"$1"'"]/package[versioncode="'"$marketvercode"'"]' -v ./apkname tmp/index.xml || xmlstarlet sel -t -m '//application[id="'"$1"'"]/package[1]' -v ./apkname tmp/index.xml)"
-	while ! wget --connect-timeout=10 $repo/$apk -O bin/$apk;do sleep 1;done
+    if [ ! -f bin/$apk ];then
+        while ! wget --connect-timeout=10 $repo/$apk -O bin/$apk;do sleep 1;done
+    fi
 	addCopy $apk $1 "$2"
 }
 
@@ -73,8 +75,14 @@ downloadFromFdroid com.nextcloud.client
 #Lawnchair launcher
 downloadFromFdroid ch.deletescape.lawnchair.plah "Launcher3QuickStep Launcher2 Launcher3"
 
-#TODO: Some social network?
-#Facebook? Twitter? Reddit? Mastodon?
+downloadFromFdroid org.mariotaku.twidere
+downloadFromFdroid com.pitchedapps.frost
+downloadFromFdroid com.keylesspalace.tusky
+
+#Fake assistant that research on duckduckgo
+downloadFromFdroid co.pxhouse.sas
+
+downloadFromFdroid com.simplemobiletools.gallery.pro "Photos Gallery Gallery2"
 
 downloadFromFdroid org.fdroid.fdroid
 echo >> apps.mk
