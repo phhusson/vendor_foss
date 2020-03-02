@@ -76,7 +76,7 @@ downloadFromFdroid ch.deletescape.lawnchair.plah "Launcher3QuickStep Launcher2 L
 #TODO: Some social network?
 downloadFromFdroid org.mariotaku.twidere
 downloadFromFdroid com.pitchedapps.frost
-#Facebook? Twitter? Reddit? Mastodon?
+downloadFromFdroid com.keylesspalace.tusky
 
 downloadFromFdroid org.fdroid.fdroid
 echo >> apps.mk
