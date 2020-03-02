@@ -74,7 +74,9 @@ downloadFromFdroid com.nextcloud.client
 downloadFromFdroid ch.deletescape.lawnchair.plah "Launcher3QuickStep Launcher2 Launcher3"
 
 #TODO: Some social network?
-#Facebook? Twitter? Reddit? Mastodon?
+downloadFromFdroid org.mariotaku.twidere
+downloadFromFdroid com.pitchedapps.frost
+downloadFromFdroid com.keylesspalace.tusky
 
 downloadFromFdroid org.fdroid.fdroid
 echo >> apps.mk
