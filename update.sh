@@ -74,6 +74,7 @@ downloadFromFdroid com.nextcloud.client
 downloadFromFdroid ch.deletescape.lawnchair.plah "Launcher3QuickStep Launcher2 Launcher3"
 
 #TODO: Some social network?
+doqnloadFromFdroid org.mariotaku.twidere
 #Facebook? Twitter? Reddit? Mastodon?
 
 downloadFromFdroid org.fdroid.fdroid
