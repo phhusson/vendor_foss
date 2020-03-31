@@ -52,8 +52,7 @@ downloadFromFdroid org.smssecure.smssecure "messaging"
 #Navigation
 downloadFromFdroid net.osmand.plus
 #Web browser
-#downloadFromFdroid org.mozilla.fennec_fdroid "Browser2 QuickSearchBox"
-downloadFromFdroid acr.browser.lightning "Browser2 QuickSearchBox"
+downloadFromFdroid org.mozilla.fennec_fdroid "Browser2 QuickSearchBox"
 #Calendar
 downloadFromFdroid ws.xsoh.etar Calendar
 #Public transportation
@@ -63,17 +62,19 @@ downloadFromFdroid com.artifex.mupdf.viewer.app
 #Keyboard/IME
 downloadFromFdroid com.menny.android.anysoftkeyboard "LatinIME OpenWnn"
 #Play Store download
-downloadFromFdroid com.github.yeriomin.yalpstore
+downloadFromFdroid com.aurora.store
 #Mail client
 downloadFromFdroid com.fsck.k9 "Email"
 #Ciphered Instant Messaging
 #downloadFromFdroid im.vector.alpha
 #Calendar/Contacts sync
-downloadFromFdroid at.bitfire.davdroid
+downloadFromFdroid com.etesync.syncadapter
 #Nextcloud client
 downloadFromFdroid com.nextcloud.client
 #Lawnchair launcher
 downloadFromFdroid ch.deletescape.lawnchair.plah "Launcher3QuickStep Launcher2 Launcher3"
+# Todo lists
+downloadFromFdroid org.tasks
 
 downloadFromFdroid org.mariotaku.twidere
 downloadFromFdroid com.pitchedapps.frost
@@ -84,7 +85,7 @@ downloadFromFdroid co.pxhouse.sas
 
 downloadFromFdroid com.simplemobiletools.gallery.pro "Photos Gallery Gallery2"
 
-downloadFromFdroid org.fdroid.fdroid
+downloadFromFdroid com.aurora.adroid
 echo >> apps.mk
 
 rm -Rf tmp
