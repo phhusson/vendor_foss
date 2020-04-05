@@ -59,8 +59,6 @@ downloadFromFdroid ws.xsoh.etar Calendar
 downloadFromFdroid de.grobox.liberario
 #Pdf viewer
 downloadFromFdroid com.artifex.mupdf.viewer.app
-#Keyboard/IME
-downloadFromFdroid com.menny.android.anysoftkeyboard "LatinIME OpenWnn"
 #Play Store download
 downloadFromFdroid com.aurora.store
 #Mail client
