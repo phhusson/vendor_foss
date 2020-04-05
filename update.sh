@@ -4,6 +4,15 @@ set -e
 repo="https://f-droid.org/repo/"
 
 addCopy() {
+	addition=""
+	if [ "$2"  == org.mozilla.fennec_fdroid ];then
+		unzip bin/$1 lib/*
+		addition="
+LOCAL_PREBUILT_JNI_LIBS := \\
+$(unzip -lv bin/$1 |grep -v Stored |sed -nE 's;.*(lib/arm64-v8a/.*);\t\1 \\;p')
+
+		"
+	fi
 cat >> Android.mk <<EOF
 include \$(CLEAR_VARS)
 LOCAL_MODULE := $2
@@ -12,13 +21,14 @@ LOCAL_SRC_FILES := bin/$1
 LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_OVERRIDES_PACKAGES := $3
+$addition
 include \$(BUILD_PREBUILT)
 
 EOF
 echo -e "\t$2 \\" >> apps.mk
 }
 
-rm -Rf apps.mk
+rm -Rf apps.mk lib
 cat > Android.mk <<EOF
 LOCAL_PATH := \$(my-dir)
 
