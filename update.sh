@@ -18,7 +18,7 @@ EOF
 echo -e "\t$2 \\" >> apps.mk
 }
 
-rm -Rf bin apps.mk
+rm -Rf apps.mk
 cat > Android.mk <<EOF
 LOCAL_PATH := \$(my-dir)
 
