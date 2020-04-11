@@ -79,8 +79,6 @@ downloadFromFdroid com.fsck.k9 "Email"
 downloadFromFdroid com.etesync.syncadapter
 #Nextcloud client
 downloadFromFdroid com.nextcloud.client
-#Lawnchair launcher
-downloadFromFdroid ch.deletescape.lawnchair.plah "Launcher3QuickStep Launcher2 Launcher3"
 # Todo lists
 downloadFromFdroid org.tasks
 
