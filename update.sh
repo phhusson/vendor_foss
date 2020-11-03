@@ -13,6 +13,9 @@ $(unzip -lv bin/$1 |grep -v Stored |sed -nE 's;.*(lib/arm64-v8a/.*);\t\1 \\;p')
 
 		"
 	fi
+    if [ "$2" == com.google.android.gms ] || [ "$2" == com.android.vending ] ;then
+        addition="LOCAL_PRIVILEGED_MODULE := true"
+    fi
 cat >> Android.mk <<EOF
 include \$(CLEAR_VARS)
 LOCAL_MODULE := $2
@@ -36,9 +39,12 @@ EOF
 echo -e 'PRODUCT_PACKAGES += \\' > apps.mk
 
 mkdir -p bin
+
 #downloadFromFdroid packageName overrides
 downloadFromFdroid() {
 	mkdir -p tmp
+    [ "$oldRepo" != "$repo" ] && rm -f tmp/index.xml
+    oldRepo="$repo"
 	if [ ! -f tmp/index.xml ];then
 		#TODO: Check security keys
 		wget --connect-timeout=10 $repo/index.jar -O tmp/index.jar
@@ -92,6 +98,13 @@ downloadFromFdroid co.pxhouse.sas
 downloadFromFdroid com.simplemobiletools.gallery.pro "Photos Gallery Gallery2"
 
 downloadFromFdroid com.aurora.adroid
+
+repo=https://microg.org/fdroid/repo/
+downloadFromFdroid com.google.android.gms
+downloadFromFdroid com.google.android.gsf
+downloadFromFdroid com.android.vending
+downloadFromFdroid org.microg.gms.droidguard
+
 echo >> apps.mk
 
 rm -Rf tmp
