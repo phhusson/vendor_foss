@@ -2,4 +2,6 @@
 
 PRODUCT_PACKAGES += \
 	FDroidPrivilegedExtension \
-	Provision
+	Provision \
+	Seedvault \
+	SeedvaultOverlay
