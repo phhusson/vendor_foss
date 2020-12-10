@@ -61,8 +61,6 @@ downloadFromFdroid() {
 
 #phh's Superuser
 downloadFromFdroid me.phh.superuser
-#YouTube viewer
-downloadFromFdroid org.schabi.newpipe
 #Ciphered SMS
 downloadFromFdroid org.smssecure.smssecure "messaging"
 #Navigation
@@ -104,6 +102,10 @@ downloadFromFdroid com.google.android.gms
 downloadFromFdroid com.google.android.gsf
 downloadFromFdroid com.android.vending
 downloadFromFdroid org.microg.gms.droidguard
+
+repo=https://archive.newpipe.net/fdroid/repo/
+#YouTube viewer
+downloadFromFdroid org.schabi.newpipe
 
 echo >> apps.mk
 
