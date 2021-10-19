@@ -25,6 +25,8 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_OVERRIDES_PACKAGES := $3
 $addition
+$(aapt d badging "bin/$1" |sed -nE "s/uses-library-not-required:'(.*)'/LOCAL_OPTIONAL_USES_LIBRARIES += \1/p")
+$(aapt d badging "bin/$1" |sed -nE "s/uses-library:'(.*)'/LOCAL_USES_LIBRARIES += \1/p")
 include \$(BUILD_PREBUILT)
 
 EOF
