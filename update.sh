@@ -16,6 +16,7 @@ $(unzip -lv bin/$1 |grep -v Stored |sed -nE 's;.*(lib/arm64-v8a/.*);\t\1 \\;p')
     if [ "$2" == com.google.android.gms ] || [ "$2" == com.android.vending ] ;then
         addition="LOCAL_PRIVILEGED_MODULE := true"
     fi
+
 cat >> Android.mk <<EOF
 include \$(CLEAR_VARS)
 LOCAL_MODULE := $2
@@ -63,16 +64,12 @@ downloadFromFdroid() {
 
 #phh's Superuser
 downloadFromFdroid me.phh.superuser
-#Ciphered SMS
-downloadFromFdroid org.smssecure.smssecure "messaging"
 #Navigation
 downloadFromFdroid net.osmand.plus
 #Web browser
-downloadFromFdroid org.mozilla.fennec_fdroid "Browser2 QuickSearchBox"
+# downloadFromFdroid org.mozilla.fennec_fdroid "Browser2 QuickSearchBox"
 #Calendar
 downloadFromFdroid ws.xsoh.etar Calendar
-#Public transportation
-downloadFromFdroid de.grobox.liberario
 #Pdf viewer
 downloadFromFdroid com.artifex.mupdf.viewer.app
 #Play Store download
@@ -85,19 +82,12 @@ downloadFromFdroid com.fsck.k9 "Email"
 downloadFromFdroid com.etesync.syncadapter
 #Nextcloud client
 downloadFromFdroid com.nextcloud.client
-# Todo lists
-downloadFromFdroid org.tasks
-
-downloadFromFdroid org.mariotaku.twidere
-downloadFromFdroid com.pitchedapps.frost
-downloadFromFdroid com.keylesspalace.tusky
-
-#Fake assistant that research on duckduckgo
-downloadFromFdroid co.pxhouse.sas
 
 downloadFromFdroid com.simplemobiletools.gallery.pro "Photos Gallery Gallery2"
 
 downloadFromFdroid com.aurora.adroid
+
+downloadFromFdroid org.openbmap
 
 repo=https://microg.org/fdroid/repo/
 downloadFromFdroid com.google.android.gms
@@ -108,6 +98,9 @@ downloadFromFdroid org.microg.gms.droidguard
 repo=https://archive.newpipe.net/fdroid/repo/
 #YouTube viewer
 downloadFromFdroid org.schabi.newpipe
+
+repo=https://fdroid.bromite.org/fdroid/repo/
+downloadFromFdroid org.bromite.bromite
 
 echo >> apps.mk
 
