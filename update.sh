@@ -100,7 +100,7 @@ repo=https://archive.newpipe.net/fdroid/repo/
 downloadFromFdroid org.schabi.newpipe
 
 repo=https://fdroid.bromite.org/fdroid/repo/
-downloadFromFdroid org.bromite.bromite
+downloadFromFdroid org.bromite.bromite "Browser2 QuickSearchBox"
 
 echo >> apps.mk
 
