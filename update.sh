@@ -93,7 +93,6 @@ repo=https://microg.org/fdroid/repo/
 downloadFromFdroid com.google.android.gms
 downloadFromFdroid com.google.android.gsf
 downloadFromFdroid com.android.vending
-downloadFromFdroid org.microg.gms.droidguard
 
 repo=https://archive.newpipe.net/fdroid/repo/
 #YouTube viewer
