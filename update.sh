@@ -96,41 +96,61 @@ downloadFromFdroid() {
 }
 
 
-#phh's Superuser
+repo="https://f-droid.org/repo/"
+##phh's Superuser
 downloadFromFdroid me.phh.superuser
-#Navigation
+##Navigation
 downloadFromFdroid net.osmand.plus
-#Web browser
-# downloadFromFdroid org.mozilla.fennec_fdroid "Browser2 QuickSearchBox"
-#Calendar
-downloadFromFdroid ws.xsoh.etar Calendar
-#Pdf viewer
-downloadFromFdroid com.artifex.mupdf.viewer.app
-#Play Store download
-downloadFromFdroid com.aurora.store
-#Mail client
+##Web browser
+## downloadFromFdroid org.mozilla.fennec_fdroid "Browser2 QuickSearchBox"
+##Calendar
+#downloadFromFdroid ws.xsoh.etar Calendar
+##Pdf viewer
+#downloadFromFdroid com.artifex.mupdf.viewer.app
+##Play Store download
+#downloadFromFdroid com.aurora.store
+##Mail client
 downloadFromFdroid com.fsck.k9 "Email"
-#Ciphered Instant Messaging
-#downloadFromFdroid im.vector.alpha
-#Calendar/Contacts sync
-downloadFromFdroid com.etesync.syncadapter
-#Nextcloud client
-downloadFromFdroid com.nextcloud.client
+##Ciphered Instant Messaging
+##downloadFromFdroid im.vector.alpha
+##Calendar/Contacts sync
+#downloadFromFdroid com.etesync.syncadapter
+##Nextcloud client
+#downloadFromFdroid com.nextcloud.client
+#
+#
+#downloadFromFdroid com.aurora.adroid
+#
+#downloadFromFdroid org.openbmap
 
+# Simple Mobile Tools
+downloadFromFdroid com.simplemobiletools.keyboard
+downloadFromFdroid com.simplemobiletools.smsmessenger "messaging"
+downloadFromFdroid com.simplemobiletools.dialer Dialer
+downloadFromFdroid com.simplemobiletools.voicerecorder
+downloadFromFdroid com.simplemobiletools.applauncher
+downloadFromFdroid com.simplemobiletools.calculator
+downloadFromFdroid com.simplemobiletools.flashlight
+downloadFromFdroid com.simplemobiletools.draw.pro
+downloadFromFdroid com.simplemobiletools.filemanager.pro
+downloadFromFdroid com.simplemobiletools.musicplayer
+downloadFromFdroid com.simplemobiletools.contacts.pro "Contacts"
+downloadFromFdroid com.simplemobiletools.thankyou
+downloadFromFdroid com.simplemobiletools.camera "Camera2"
+downloadFromFdroid com.simplemobiletools.calendar.pro "Calendar"
+downloadFromFdroid com.simplemobiletools.notes.pro
+downloadFromFdroid com.simplemobiletools.clock "DeskClock"
 downloadFromFdroid com.simplemobiletools.gallery.pro "Photos Gallery Gallery2"
 
-downloadFromFdroid com.aurora.adroid
-
-downloadFromFdroid org.openbmap
 
 repo=https://microg.org/fdroid/repo/
 downloadFromFdroid com.google.android.gms
 downloadFromFdroid com.google.android.gsf
 downloadFromFdroid com.android.vending
-
-repo=https://archive.newpipe.net/fdroid/repo/
-#YouTube viewer
-downloadFromFdroid org.schabi.newpipe
+#
+#repo=https://archive.newpipe.net/fdroid/repo/
+##YouTube viewer
+#downloadFromFdroid org.schabi.newpipe
 
 repo=https://fdroid.bromite.org/fdroid/repo/
 downloadFromFdroid org.bromite.bromite "Browser2 QuickSearchBox"
