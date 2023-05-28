@@ -80,6 +80,7 @@ downloadFromFdroid() {
         for native in $nativecodes;do
             newNative="$(echo $native |sed -e s/arm64-v8a/arm64/g -e s/armeabi-v7a/arm/g)"
             apk="$(xmlstarlet sel -t -m '//application[id="'"$1"'"]/package[version="'"$marketversion"'" and nativecode="'"$native"'"]' -v ./apkname tmp/index.xml)"
+            apk=$(echo $apk | sed 's/\.apk.*//g').apk
             localName="${1}_${marketversion}_${newNative}.apk"
             if [ ! -f bin/$localName ];then
                 while ! wget --connect-timeout=10 $repo/$apk -O bin/$localName;do sleep 1;done
@@ -88,6 +89,7 @@ downloadFromFdroid() {
         addMultiarch $1 $marketversion "$2"
     else
         apk="$(xmlstarlet sel -t -m '//application[id="'"$1"'"]/package[version="'"$marketversion"'"]' -v ./apkname tmp/index.xml || xmlstarlet sel -t -m '//application[id="'"$1"'"]/package[1]' -v ./apkname tmp/index.xml)"
+        apk=$(echo $apk | sed 's/\.apk.*//g').apk
         if [ ! -f bin/$apk ];then
             while ! wget --connect-timeout=10 $repo/$apk -O bin/$apk;do sleep 1;done
         fi
